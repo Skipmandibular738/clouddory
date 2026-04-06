@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="https://clouddory.com/favicon.ico" width="60" alt="CloudDory" />
+  <img src="docs/logo.png" width="200" alt="CloudDory" />
 </p>
 
 <h1 align="center">CloudDory</h1>
 
 <p align="center">
-  <strong>The open-source cloud operations platform.</strong><br>
-  FinOps, Security, Threat Intelligence & SOAR — all in one dashboard.
+  <strong>Free & open-source cloud operations platform.</strong><br>
+  FinOps, Security, Threat Intelligence & SOAR — all in one dashboard.<br>
+  Built with AI. Self-hosted. No vendor lock-in.
 </p>
 
 <p align="center">
@@ -18,8 +19,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-cyan" alt="License" />
+  <img src="https://img.shields.io/badge/cost-free-brightgreen" alt="Free" />
   <img src="https://img.shields.io/badge/PRs-welcome-cyan" alt="PRs Welcome" />
   <img src="https://img.shields.io/badge/self--hosted-yes-green" alt="Self Hosted" />
+  <img src="https://img.shields.io/badge/AI--powered-Gemini%20%7C%20OpenAI%20%7C%20Anthropic-blueviolet" alt="AI Powered" />
 </p>
 
 ---
@@ -224,12 +227,17 @@ PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Author
 
-**Alan Vo** — [alanvo@gmail.com](mailto:alanvo@gmail.com)
+**Alan Vo** — AI & Cloud Infrastructure Developer
 
+- Email: [alanvo@gmail.com](mailto:alanvo@gmail.com)
 - GitHub: [@ALANDVO](https://github.com/ALANDVO)
 - Website: [clouddory.com](https://clouddory.com)
 
-Built with a vision to make cloud operations accessible to every team, not just those with enterprise budgets.
+Alan is an AI-focused software developer specializing in building intelligent cloud platforms. CloudDory was built using AI-augmented development — from the NLP-powered DoryAI assistant to the Gemini-integrated cost analysis engine. His work spans full-stack development, AI/ML integration, cloud infrastructure automation, and cybersecurity tooling.
+
+**Other projects:** [Soverint](https://soverint.com) (threat intelligence platform), [FeedPacket](https://feedpacket.com) (AI-powered analytics)
+
+Interested in AI development, cloud architecture, or want to collaborate? Reach out at [alanvo@gmail.com](mailto:alanvo@gmail.com).
 
 ## Support
 
