@@ -211,17 +211,15 @@ PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Author
 
-**Alan Vo** — AI & Cloud Infrastructure Developer
+**Alan Vo** — AI Engineer & Infrastructure Architect
 
 - Email: [alanvo@gmail.com](mailto:alanvo@gmail.com)
 - GitHub: [@ALANDVO](https://github.com/ALANDVO)
 - Website: [clouddory.com](https://clouddory.com)
 
-Alan is an AI-focused software developer specializing in building intelligent cloud platforms. CloudDory was built using AI-augmented development — from the NLP-powered DoryAI assistant to the Gemini-integrated cost analysis engine. His work spans full-stack development, AI/ML integration, cloud infrastructure automation, and cybersecurity tooling.
+Alan is an AI engineer and automation specialist focused on building intelligent cloud platforms. CloudDory was built to prove that enterprise-grade cloud operations tools don't need enterprise-grade budgets.
 
-**Other projects:** [Soverint](https://soverint.com) (threat intelligence platform), [FeedPacket](https://feedpacket.com) (AI-powered analytics)
-
-Interested in AI development, cloud architecture, or want to collaborate? Reach out at [alanvo@gmail.com](mailto:alanvo@gmail.com).
+Interested in AI engineering, cloud architecture, or want to collaborate? Reach out at [alanvo@gmail.com](mailto:alanvo@gmail.com).
 
 ## Support
 

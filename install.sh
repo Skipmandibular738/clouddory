@@ -150,24 +150,39 @@ EOF
 
 else
   # Node.js installation
-  echo -e "${CYAN}→${NC} Installing dependencies..."
   cd apps/dashboard
-  npm install --production=false 2>&1 | tail -3
+
+  # Symlink prisma schema from repo root
+  ln -sf ../../prisma prisma
+
+  echo -e "${CYAN}→${NC} Installing dependencies..."
+  npm install 2>&1 | tail -3
 
   # Create .env
   echo ""
   echo -e "${CYAN}→${NC} Configuring environment..."
 
-  # Check for MySQL
+  # Check for MySQL — try multiple auth methods
+  DB_URL=""
   if check_cmd mysql; then
     echo ""
     echo -e "  ${GREEN}✓${NC} MySQL found"
-    DB_URL="mysql://root@localhost:3306/clouddory"
 
-    # Try to create database
-    mysql -u root -e "CREATE DATABASE IF NOT EXISTS clouddory CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" 2>/dev/null && \
-      echo -e "  ${GREEN}✓${NC} Database 'clouddory' created" || \
-      echo -e "  ${YELLOW}!${NC} Could not auto-create database — you may need to create it manually"
+    # Try: root with no password, then sudo mysql, then prompt
+    if mysql -u root -e "SELECT 1" &>/dev/null; then
+      mysql -u root -e "CREATE DATABASE IF NOT EXISTS clouddory CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" 2>/dev/null
+      mysql -u root -e "CREATE USER IF NOT EXISTS 'clouddory'@'localhost' IDENTIFIED BY '${DB_PASSWORD}'; GRANT ALL ON clouddory.* TO 'clouddory'@'localhost'; FLUSH PRIVILEGES;" 2>/dev/null
+      DB_URL="mysql://clouddory:${DB_PASSWORD}@localhost:3306/clouddory"
+      echo -e "  ${GREEN}✓${NC} Database and user created"
+    elif sudo mysql -e "SELECT 1" &>/dev/null; then
+      sudo mysql -e "CREATE DATABASE IF NOT EXISTS clouddory CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" 2>/dev/null
+      sudo mysql -e "CREATE USER IF NOT EXISTS 'clouddory'@'localhost' IDENTIFIED BY '${DB_PASSWORD}'; GRANT ALL ON clouddory.* TO 'clouddory'@'localhost'; FLUSH PRIVILEGES;" 2>/dev/null
+      DB_URL="mysql://clouddory:${DB_PASSWORD}@localhost:3306/clouddory"
+      echo -e "  ${GREEN}✓${NC} Database and user created (via sudo)"
+    else
+      echo -e "  ${YELLOW}!${NC} Could not auto-create database. Edit DATABASE_URL in .env manually."
+      DB_URL="mysql://user:password@localhost:3306/clouddory"
+    fi
   else
     echo ""
     echo -e "  ${YELLOW}!${NC} MySQL not found. You'll need to:"
@@ -194,9 +209,17 @@ EOF
   npx prisma generate 2>&1 | tail -3
   echo -e "  ${GREEN}✓${NC} Database ready"
 
-  # Build
+  # Build (needs ~1.5GB RAM — add swap if low memory)
+  FREE_MEM=$(free -m 2>/dev/null | awk '/^Mem:/{print $7}' || echo "2048")
+  if [ "${FREE_MEM:-2048}" -lt 1500 ] && [ ! -f /swapfile ]; then
+    echo -e "  ${YELLOW}!${NC} Low memory detected (${FREE_MEM}MB). Adding swap..."
+    sudo dd if=/dev/zero of=/swapfile bs=1M count=2048 2>/dev/null
+    sudo chmod 600 /swapfile && sudo mkswap /swapfile &>/dev/null && sudo swapon /swapfile &>/dev/null
+    echo -e "  ${GREEN}✓${NC} 2GB swap added"
+  fi
+
   echo ""
-  echo -e "${CYAN}→${NC} Building CloudDory..."
+  echo -e "${CYAN}→${NC} Building CloudDory (this may take a few minutes)..."
   npm run build 2>&1 | tail -5
 
   # Start

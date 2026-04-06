@@ -58,7 +58,7 @@ export default function BillingPage() {
         <CardContent className="p-8">
           <h3 className="font-display font-semibold text-lg text-white mb-3">Built by Alan Vo</h3>
           <p className="text-sm text-slate-400 leading-relaxed mb-4">
-            AI and cloud infrastructure developer specializing in FinOps, DevSecOps, and intelligent automation.
+            AI engineer and automation specialist focused on FinOps, DevSecOps, and intelligent cloud platforms.
             CloudDory was built to prove that enterprise-grade cloud operations tools don&apos;t need enterprise-grade budgets.
           </p>
 
