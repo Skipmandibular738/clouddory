@@ -79,44 +79,15 @@ See CloudDory in action at **[dashboard.clouddory.com](https://dashboard.clouddo
 
 ## Quick Start
 
-### Prerequisites
-
-- Node.js 18+
-- MySQL or MariaDB 10.5+
-- npm
-
-### 1. Clone and install
+### One-liner (recommended)
 
 ```bash
-git clone https://github.com/ALANDVO/clouddory.git
-cd clouddory/apps/dashboard
-npm install
+curl -fsSL https://clouddory.com/install.sh | bash
 ```
 
-### 2. Configure environment
+Detects your environment, installs dependencies, sets up the database, and starts CloudDory. Works on macOS and Linux.
 
-```bash
-cp ../../.env.example .env
-# Edit .env with your database URL and secrets
-```
-
-### 3. Set up database
-
-```bash
-npx prisma db push
-npx prisma generate
-```
-
-### 4. Build and run
-
-```bash
-npm run build
-npm start
-```
-
-Open **http://localhost:3000** — the first user to register becomes admin.
-
-### Docker (recommended)
+### Docker
 
 ```bash
 git clone https://github.com/ALANDVO/clouddory.git
@@ -124,7 +95,20 @@ cd clouddory
 docker-compose up -d
 ```
 
-Open **http://localhost:3000**.
+### Manual Install
+
+```bash
+# Prerequisites: Node.js 18+, MySQL/MariaDB
+
+git clone https://github.com/ALANDVO/clouddory.git
+cd clouddory/apps/dashboard
+npm install
+cp ../../.env.example .env    # Edit with your DB URL
+npx prisma db push
+npm run build && npm start
+```
+
+Open **http://localhost:3000** — first user to register becomes admin.
 
 ## Configure AI
 
