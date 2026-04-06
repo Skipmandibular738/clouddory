@@ -1,35 +1,34 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useMemo } from "react";
-import type { ModuleKey } from "@/lib/subscriptions";
+import { createContext, useContext } from 'react';
 
 interface SubscriptionContextValue {
-  subscriptions: { module: string; status: string }[];
-  hasAccess: (module: ModuleKey) => boolean;
-  getSubscription: (module: ModuleKey) => { module: string; status: string } | undefined;
+  subscriptions: any[];
+  hasAccess: (module: string) => boolean;
+  getSubscription: (module: string) => any;
 }
 
 const SubscriptionContext = createContext<SubscriptionContextValue>({
   subscriptions: [],
-  hasAccess: () => true,
-  getSubscription: () => ({ module: "finops", status: "active" }),
+  hasAccess: () => true,  // Always grant access — free & open source
+  getSubscription: () => ({ status: 'active', plan: 'free' }),
 });
 
 export function SubscriptionProvider({
-  subscriptions: _subscriptions,
+  subscriptions,
   children,
 }: {
-  subscriptions: unknown[];
+  subscriptions: any[];
   children: React.ReactNode;
 }) {
-  const value = useMemo<SubscriptionContextValue>(() => ({
-    subscriptions: [],
-    hasAccess: () => true, // All modules accessible in self-hosted
-    getSubscription: (module: ModuleKey) => ({ module, status: "active" }),
-  }), []);
-
   return (
-    <SubscriptionContext.Provider value={value}>
+    <SubscriptionContext.Provider
+      value={{
+        subscriptions,
+        hasAccess: () => true,
+        getSubscription: () => ({ status: 'active', plan: 'free' }),
+      }}
+    >
       {children}
     </SubscriptionContext.Provider>
   );
