@@ -6,6 +6,7 @@ import HowItWorks from '@/components/HowItWorks';
 import Features from '@/components/Features';
 import Stats from '@/components/Stats';
 import Pricing from '@/components/Pricing';
+import GovCloud from '@/components/GovCloud';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -21,6 +22,7 @@ export default function Home() {
       <Features />
       <Stats />
       <Pricing />
+      <GovCloud />
       <FinalCTA />
       <Footer />
       <ScrollToTop />

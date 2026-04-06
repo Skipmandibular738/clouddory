@@ -8,44 +8,44 @@ import Footer from '@/components/Footer';
 
 const faqs = [
   {
-    question: 'How does usage-based pricing work?',
+    question: 'Is CloudDory really free?',
     answer:
-      'Our pricing scales with your monitored cloud spend. As your cloud footprint grows, your CloudDory subscription adjusts proportionally. This ensures you only pay for the value you receive — the more you monitor, the more savings opportunities we find.',
+      'Yes. CloudDory is 100% free and open source under the MIT license. You can self-host it on your own infrastructure with zero cost. We also offer a free hosted demo at dashboard.clouddory.com for teams with under $10,000/month in cloud spend.',
   },
   {
-    question: "What's included in each plan?",
+    question: "What's included?",
     answer:
-      'All plans include access to all four modules: FinOps & Cost Optimization, Cloud Security (CSPM), Threat Intelligence, and SOAR Automation. The difference between plans is in the number of cloud accounts, data retention, integrations, and level of support.',
+      'Everything — all modules included with no feature gates. FinOps & cost optimization, cloud security (CSPM), CVE tracking, threat intelligence, SOAR automation, DoryAI assistant, 20+ integrations, custom dashboards, and more.',
   },
   {
-    question: 'Is there a free trial?',
+    question: 'What if my cloud spend exceeds $10,000/month?',
     answer:
-      'Yes! Every plan comes with a 14-day free trial with full access to all features. No credit card required to start. You can explore the entire platform and see real savings recommendations before committing.',
+      'Our hosted demo supports cloud accounts with up to $10,000/month in spend. For larger environments, we recommend self-hosting CloudDory on your own infrastructure — it takes about 10 minutes to set up with Docker. All features work identically when self-hosted.',
   },
   {
-    question: 'Can I change plans?',
+    question: 'Is this suitable for GovCloud and regulated environments?',
     answer:
-      'Absolutely. You can upgrade or downgrade your plan at any time. When upgrading, you get immediate access to new features. When downgrading, the change takes effect at the start of your next billing cycle.',
+      'Absolutely. Since CloudDory is self-hosted, your data never leaves your network. This makes it ideal for GovCloud, FedRAMP environments, air-gapped networks, and any organization with strict data residency requirements. No third-party data transmission required.',
   },
   {
-    question: 'What happens if my cloud spend changes?',
+    question: 'How do I self-host CloudDory?',
     answer:
-      'Your subscription adjusts automatically based on your monitored cloud spend. If your usage decreases, your bill goes down. If it increases, it scales up proportionally. We always notify you before any pricing changes take effect.',
+      'Clone the repo from GitHub, configure your .env file with a database URL, and run docker-compose up. Full setup takes under 10 minutes. See the README for detailed instructions. Works on any server with Node.js 18+ and MySQL/MariaDB.',
   },
   {
-    question: 'Do you offer annual billing?',
+    question: 'What AI providers are supported?',
     answer:
-      'Yes, we offer annual billing with a 20% discount compared to monthly pricing. Annual plans are billed upfront and include all the same features and support as monthly plans.',
+      'CloudDory supports Google Gemini, OpenAI (GPT-4), Anthropic (Claude), and OpenRouter. Bring your own API keys — they are stored encrypted and never shared. Configure them via Settings > AI Config in the dashboard.',
   },
   {
-    question: 'What payment methods do you accept?',
+    question: 'Can I contribute to the project?',
     answer:
-      'CloudDory is open source and free to self-host. For enterprise support and managed hosting, contact us.',
+      'Yes! CloudDory is open source and we welcome contributions. Check out our GitHub repo at github.com/ALANDVO/clouddory for open issues, contribution guidelines, and the roadmap.',
   },
   {
-    question: 'How do enterprise contracts work?',
+    question: 'Who built this?',
     answer:
-      'Enterprise contracts are customized to your organization\'s needs. They include volume-based pricing, dedicated support, custom SLAs, and flexible payment terms. Contact our sales team to discuss your requirements and get a tailored proposal.',
+      'CloudDory was built by Alan Vo, an AI and cloud infrastructure developer. Reach out at alanvo@gmail.com for questions, partnerships, or consulting.',
   },
 ];
 
