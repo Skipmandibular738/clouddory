@@ -54,7 +54,9 @@ export default function OnboardingPage() {
   };
 
   const handleTeamDone = () => {
-    router.push('/dashboard');
+    // Hard navigation forces full server-side session refresh
+    // so the JWT picks up the new org membership
+    window.location.href = '/dashboard';
   };
 
   return (
