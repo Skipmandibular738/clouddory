@@ -7,7 +7,7 @@ import { prisma } from "./prisma";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
-  useSecureCookies: true,
+  useSecureCookies: process.env.NEXTAUTH_URL?.startsWith('https://') ?? false,
   session: { strategy: "jwt" },
   pages: {
     signIn: "/login",
